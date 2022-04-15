@@ -2,8 +2,10 @@ package view;
 
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JTable;
 
 public class KHACHHANG extends JPanel {
+	private JTable JTableKH;
 
 	/**
 	 * Create the panel.
@@ -16,9 +18,9 @@ public class KHACHHANG extends JPanel {
 		add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("KHACHHANG");
-		lblNewLabel.setBounds(283, 161, 190, 142);
-		panel.add(lblNewLabel);
+		JTableKH = new JTable();
+		JTableKH.setBounds(10, 254, 875, 251);
+		panel.add(JTableKH);
 
 	}
 

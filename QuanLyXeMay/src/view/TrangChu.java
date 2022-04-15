@@ -55,7 +55,7 @@ public class TrangChu extends JFrame {
 		setFont(new Font("Dialog", Font.BOLD, 17));
 		setTitle("Qu\u1EA3n l\u00FD xe m\u00E1y");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 850, 556);
+		setBounds(100, 100, 1143, 561);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -70,7 +70,7 @@ public class TrangChu extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addComponent(jpnMenu, GroupLayout.PREFERRED_SIZE, 171, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(jpnView, GroupLayout.PREFERRED_SIZE, 659, GroupLayout.PREFERRED_SIZE)
+					.addComponent(jpnView, GroupLayout.PREFERRED_SIZE, 975, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
