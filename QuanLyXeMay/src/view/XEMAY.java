@@ -46,6 +46,7 @@ public class XEMAY extends JPanel {
 		JTableXe.getColumnModel().getColumn(8).setPreferredWidth(60);
 		JTableXe.setBounds(10, 254, 875, 251);
 		panel.add(JTableXe);
+		String header[] = { "Column 1", "Column 2", "Column 3" };
 		
 		try {
 			Connection cons = DriverManager.getConnection("jdbc:sqlserver://localhost;databaseName=QLXEMAY1;user=sa;password=123456");

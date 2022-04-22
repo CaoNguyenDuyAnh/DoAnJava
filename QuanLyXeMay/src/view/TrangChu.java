@@ -55,7 +55,7 @@ public class TrangChu extends JFrame {
 		setFont(new Font("Dialog", Font.BOLD, 17));
 		setTitle("Qu\u1EA3n l\u00FD xe m\u00E1y");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1143, 561);
+		setBounds(100, 100, 1143, 708);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -75,17 +75,17 @@ public class TrangChu extends JFrame {
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(jpnView, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
-						.addComponent(jpnMenu, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 521, GroupLayout.PREFERRED_SIZE))
+						.addComponent(jpnMenu, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE)
+						.addComponent(jpnView, GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE))
 					.addContainerGap())
 		);
 		jpnMenu.setLayout(null);
 		
 		JPanel jpnXe = new JPanel();
 		jpnXe.setBackground(Color.ORANGE);
-		jpnXe.setBounds(10, 10, 150, 72);
+		jpnXe.setBounds(10, 10, 150, 96);
 		jpnMenu.add(jpnXe);
 		jpnXe.setLayout(null);
 		
@@ -93,72 +93,72 @@ public class TrangChu extends JFrame {
 		jlbXe.setForeground(Color.WHITE);
 		jlbXe.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		jlbXe.setHorizontalAlignment(SwingConstants.CENTER);
-		jlbXe.setBounds(10, 10, 130, 52);
+		jlbXe.setBounds(10, 10, 130, 76);
 		jpnXe.add(jlbXe);
 		
 		JPanel jpnKH = new JPanel();
 		jpnKH.setBackground(Color.ORANGE);
 		jpnKH.setLayout(null);
-		jpnKH.setBounds(10, 92, 150, 72);
+		jpnKH.setBounds(10, 116, 150, 96);
 		jpnMenu.add(jpnKH);
 		
 		JLabel jlbKH = new JLabel("KHÁCH HÀNG");
 		jlbKH.setForeground(Color.WHITE);
 		jlbKH.setHorizontalAlignment(SwingConstants.CENTER);
 		jlbKH.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		jlbKH.setBounds(10, 10, 130, 52);
+		jlbKH.setBounds(10, 10, 130, 76);
 		jpnKH.add(jlbKH);
 		
 		JPanel jpnNCC = new JPanel();
 		jpnNCC.setBackground(Color.ORANGE);
 		jpnNCC.setLayout(null);
-		jpnNCC.setBounds(10, 174, 150, 72);
+		jpnNCC.setBounds(10, 222, 150, 96);
 		jpnMenu.add(jpnNCC);
 		
 		JLabel jlbNCC = new JLabel("NHÀ CUNG CẤP");
 		jlbNCC.setForeground(Color.WHITE);
 		jlbNCC.setHorizontalAlignment(SwingConstants.CENTER);
 		jlbNCC.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		jlbNCC.setBounds(10, 10, 130, 52);
+		jlbNCC.setBounds(10, 10, 130, 76);
 		jpnNCC.add(jlbNCC);
 		
 		JPanel jpnNV = new JPanel();
 		jpnNV.setBackground(Color.ORANGE);
 		jpnNV.setLayout(null);
-		jpnNV.setBounds(10, 256, 150, 72);
+		jpnNV.setBounds(10, 328, 150, 96);
 		jpnMenu.add(jpnNV);
 		
 		JLabel jlbNV = new JLabel("NHÂN VIÊN");
 		jlbNV.setForeground(Color.WHITE);
 		jlbNV.setHorizontalAlignment(SwingConstants.CENTER);
 		jlbNV.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		jlbNV.setBounds(10, 10, 130, 52);
+		jlbNV.setBounds(10, 10, 130, 76);
 		jpnNV.add(jlbNV);
 		
 		JPanel jpnBan = new JPanel();
 		jpnBan.setBackground(Color.ORANGE);
 		jpnBan.setLayout(null);
-		jpnBan.setBounds(10, 338, 150, 72);
+		jpnBan.setBounds(10, 434, 150, 96);
 		jpnMenu.add(jpnBan);
 		
 		JLabel jlbBan = new JLabel("BÁN HÀNG");
 		jlbBan.setForeground(Color.WHITE);
 		jlbBan.setHorizontalAlignment(SwingConstants.CENTER);
 		jlbBan.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		jlbBan.setBounds(10, 10, 130, 52);
+		jlbBan.setBounds(10, 10, 130, 76);
 		jpnBan.add(jlbBan);
 		
 		JPanel jpnThongKe = new JPanel();
 		jpnThongKe.setBackground(Color.ORANGE);
 		jpnThongKe.setLayout(null);
-		jpnThongKe.setBounds(10, 420, 150, 72);
+		jpnThongKe.setBounds(10, 540, 150, 96);
 		jpnMenu.add(jpnThongKe);
 		
 		JLabel jlbThongKe = new JLabel("THỐNG KÊ");
 		jlbThongKe.setForeground(Color.WHITE);
 		jlbThongKe.setHorizontalAlignment(SwingConstants.CENTER);
 		jlbThongKe.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		jlbThongKe.setBounds(10, 10, 130, 52);
+		jlbThongKe.setBounds(10, 10, 130, 76);
 		jpnThongKe.add(jlbThongKe);
 		contentPane.setLayout(gl_contentPane);
 		
