@@ -23,14 +23,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
 
 public class KHACHHANG extends JPanel {
 	private JTable JTableKH;
 	private JTextField txtMa;
+	private JTextField txtSDT;
 	private JTextField txtTen;
 	private JTextField txtDC;
-	private JTextField txtSDT;
 	private JTextField txtEmail;
+	private JTextField txtTKKH;
 
 	/**
 	 * Create the panel.
@@ -39,87 +42,9 @@ public class KHACHHANG extends JPanel {
 		setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 962, 683);
+		panel.setBounds(0, 0, 929, 683);
 		add(panel);
 		panel.setLayout(null);
-		
-		JTableKH = new JTable();
-		JTableKH.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"M\u00E3 kh\u00E1ch h\u00E0ng", "T\u00EAn kh\u00E1ch h\u00E0ng", "\u0110\u1ECBa ch\u1EC9 ", " S\u1ED1 \u0111i\u1EC7n tho\u1EA1i", "Email"
-			}
-		));
-		JTableKH.getColumnModel().getColumn(0).setPreferredWidth(80);
-		JTableKH.getColumnModel().getColumn(1).setPreferredWidth(160);
-		JTableKH.getColumnModel().getColumn(2).setPreferredWidth(160);
-		JTableKH.getColumnModel().getColumn(3).setPreferredWidth(135);
-		JTableKH.getColumnModel().getColumn(4).setPreferredWidth(135);
-		JTableKH.setBounds(10, 384, 875, 289);
-		panel.add(JTableKH);
-		
-		JPanel panel_1 = new JPanel();
-		panel_1.setLayout(null);
-		panel_1.setToolTipText("");
-		panel_1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Th\u00F4ng tin kh\u00E1ch h\u00E0ng", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_1.setBounds(10, 51, 875, 323);
-		panel.add(panel_1);
-		
-		JLabel lblNewLabel = new JLabel("Mã khách hàng");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel.setBounds(10, 40, 117, 29);
-		panel_1.add(lblNewLabel);
-		
-		txtMa = new JTextField();
-		txtMa.setColumns(10);
-		txtMa.setBounds(137, 40, 149, 29);
-		panel_1.add(txtMa);
-		
-		JLabel lblTnKhchHng = new JLabel("Tên khách hàng");
-		lblTnKhchHng.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTnKhchHng.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblTnKhchHng.setBounds(10, 107, 117, 29);
-		panel_1.add(lblTnKhchHng);
-		
-		JLabel lblaCh = new JLabel("Địa chỉ");
-		lblaCh.setHorizontalAlignment(SwingConstants.CENTER);
-		lblaCh.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblaCh.setBounds(10, 179, 117, 29);
-		panel_1.add(lblaCh);
-		
-		JLabel lblSinThoi = new JLabel("Số điện thoại");
-		lblSinThoi.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSinThoi.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblSinThoi.setBounds(296, 40, 117, 29);
-		panel_1.add(lblSinThoi);
-		
-		JLabel lblEmail = new JLabel("Email");
-		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblEmail.setBounds(10, 243, 117, 29);
-		panel_1.add(lblEmail);
-		
-		txtTen = new JTextField();
-		txtTen.setColumns(10);
-		txtTen.setBounds(137, 107, 555, 29);
-		panel_1.add(txtTen);
-		
-		txtDC = new JTextField();
-		txtDC.setColumns(10);
-		txtDC.setBounds(137, 186, 555, 29);
-		panel_1.add(txtDC);
-		
-		txtSDT = new JTextField();
-		txtSDT.setColumns(10);
-		txtSDT.setBounds(405, 42, 287, 29);
-		panel_1.add(txtSDT);
-		
-		txtEmail = new JTextField();
-		txtEmail.setColumns(10);
-		txtEmail.setBounds(137, 245, 555, 29);
-		panel_1.add(txtEmail);
 		
 		JButton btnSave = new JButton("Lưu");
 		btnSave.addActionListener(new ActionListener() {
@@ -155,8 +80,8 @@ public class KHACHHANG extends JPanel {
 				}
 			}
 		});
-		btnSave.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnSave.setBounds(10, 10, 97, 31);
+		btnSave.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnSave.setBounds(151, 355, 97, 31);
 		panel.add(btnSave);
 		
 		JButton btnDelete = new JButton("Xóa");
@@ -190,8 +115,8 @@ public class KHACHHANG extends JPanel {
 				}
 			}
 		});
-		btnDelete.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnDelete.setBounds(643, 10, 97, 31);
+		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnDelete.setBounds(658, 355, 97, 31);
 		panel.add(btnDelete);
 		
 		JButton btnNew = new JButton("Nhập mới");
@@ -204,23 +129,24 @@ public class KHACHHANG extends JPanel {
 				txtSDT.setText("");
 			}
 		});
-		btnNew.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnNew.setBounds(117, 10, 174, 31);
+		btnNew.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNew.setBounds(269, 355, 174, 31);
 		panel.add(btnNew);
 		
 		JButton btnFind = new JButton("Tìm kiếm");
 		btnFind.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(txtMa.getText().equals("")) {
+				if(txtTKKH.getText().equals("")) {
 					JOptionPane.showMessageDialog(btnFind, "Nhập mã khách hàng cần tìm kiếm");
 					return;
 				}
 				try {
 					KhachHangDao dao = new KhachHangDao();
 					
-					model.KHACHHANG khachhang = dao.FindbyID(txtMa.getText());
+					model.KHACHHANG khachhang = dao.FindbyID(txtTKKH.getText());
 					
 					if(khachhang != null) {
+						txtMa.setText(khachhang.getMa_kh());
 						txtTen.setText(khachhang.getTen_kh());
 						txtDC.setText(khachhang.getDia_chi());
 						txtSDT.setText(khachhang.getSdt());
@@ -235,8 +161,8 @@ public class KHACHHANG extends JPanel {
 				}
 			}
 		});
-		btnFind.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnFind.setBounds(485, 10, 148, 31);
+		btnFind.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnFind.setBounds(509, 22, 148, 31);
 		panel.add(btnFind);
 		
 		JButton btnUpdate = new JButton("Cập nhật");
@@ -277,23 +203,142 @@ public class KHACHHANG extends JPanel {
 				}
 			}
 		});
-		btnUpdate.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnUpdate.setBounds(301, 10, 174, 31);
+		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnUpdate.setBounds(463, 355, 174, 31);
 		panel.add(btnUpdate);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(30, 442, 866, 196);
+		panel.add(scrollPane);
+		
+		JTableKH = new JTable();
+		scrollPane.setViewportView(JTableKH);
+		JTableKH.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"M\u00E3 kh\u00E1ch h\u00E0ng", "T\u00EAn kh\u00E1ch h\u00E0ng", "\u0110\u1ECBa ch\u1EC9 ", " S\u1ED1 \u0111i\u1EC7n tho\u1EA1i", "Email"
+			}
+		));
+		JTableKH.getColumnModel().getColumn(0).setPreferredWidth(80);
+		JTableKH.getColumnModel().getColumn(1).setPreferredWidth(160);
+		JTableKH.getColumnModel().getColumn(2).setPreferredWidth(160);
+		JTableKH.getColumnModel().getColumn(3).setPreferredWidth(135);
+		JTableKH.getColumnModel().getColumn(4).setPreferredWidth(135);
+		
+		JLabel lblNewLabel = new JLabel("Mã khách hàng");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(72, 121, 117, 29);
+		panel.add(lblNewLabel);
+		
+		txtMa = new JTextField();
+		txtMa.setColumns(10);
+		txtMa.setBounds(199, 123, 149, 29);
+		panel.add(txtMa);
+		
+		JLabel lblSinThoi = new JLabel("Số điện thoại");
+		lblSinThoi.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSinThoi.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblSinThoi.setBounds(363, 121, 104, 29);
+		panel.add(lblSinThoi);
+		
+		txtSDT = new JTextField();
+		txtSDT.setColumns(10);
+		txtSDT.setBounds(467, 123, 287, 29);
+		panel.add(txtSDT);
+		
+		txtTen = new JTextField();
+		txtTen.setColumns(10);
+		txtTen.setBounds(199, 173, 555, 29);
+		panel.add(txtTen);
+		
+		JLabel lblTnKhchHng = new JLabel("Tên khách hàng");
+		lblTnKhchHng.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTnKhchHng.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblTnKhchHng.setBounds(72, 173, 117, 29);
+		panel.add(lblTnKhchHng);
+		
+		JLabel lblaCh = new JLabel("Địa chỉ");
+		lblaCh.setHorizontalAlignment(SwingConstants.CENTER);
+		lblaCh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblaCh.setBounds(72, 223, 117, 29);
+		panel.add(lblaCh);
+		
+		txtDC = new JTextField();
+		txtDC.setColumns(10);
+		txtDC.setBounds(199, 225, 555, 29);
+		panel.add(txtDC);
+		
+		txtEmail = new JTextField();
+		txtEmail.setColumns(10);
+		txtEmail.setBounds(199, 277, 555, 29);
+		panel.add(txtEmail);
+		
+		JLabel lblEmail = new JLabel("Email");
+		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblEmail.setBounds(72, 275, 117, 29);
+		panel.add(lblEmail);
+		
+		JSeparator separator_2_1 = new JSeparator();
+		separator_2_1.setBounds(10, 10, 900, 2);
+		panel.add(separator_2_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("Mã khách hàng");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setBounds(222, 22, 117, 29);
+		panel.add(lblNewLabel_1);
+		
+		txtTKKH = new JTextField();
+		txtTKKH.setColumns(10);
+		txtTKKH.setBounds(349, 22, 149, 29);
+		panel.add(txtTKKH);
+		
+		JSeparator separator_2_1_1 = new JSeparator();
+		separator_2_1_1.setBounds(10, 63, 900, 2);
+		panel.add(separator_2_1_1);
+		
+		JLabel lblNewLabel_10_2 = new JLabel("TÌM KIẾM");
+		lblNewLabel_10_2.setForeground(Color.BLUE);
+		lblNewLabel_10_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_10_2.setBounds(20, 27, 89, 20);
+		panel.add(lblNewLabel_10_2);
+		
+		JLabel lblNewLabel_10 = new JLabel("THÔNG TIN KHÁCH HÀNG");
+		lblNewLabel_10.setForeground(Color.BLUE);
+		lblNewLabel_10.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_10.setBounds(20, 75, 203, 20);
+		panel.add(lblNewLabel_10);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(141, 343, 629, 2);
+		panel.add(separator);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(141, 396, 629, 2);
+		panel.add(separator_1);
+		
+		JLabel lblNewLabel_10_1 = new JLabel("DANH SÁCH KHÁCH HÀNG");
+		lblNewLabel_10_1.setForeground(Color.BLUE);
+		lblNewLabel_10_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_10_1.setBounds(20, 412, 228, 20);
+		panel.add(lblNewLabel_10_1);
+		DefaultTableModel model = (DefaultTableModel) JTableKH.getModel();
 		
 		
 		try {
 			Connection cons = DriverManager.getConnection("jdbc:sqlserver://localhost;databaseName=QLXEMAY1;user=sa;password=123456");
 			PreparedStatement st = cons.prepareStatement("Select * from KHACHHANG");
 			ResultSet rs = st.executeQuery();
-			DefaultTableModel model = (DefaultTableModel) JTableKH.getModel();
 			while (rs.next()) {
 				Object objList[] = {rs.getString("MAKH"), rs.getString("TENKH"), rs.getString("DIACHI"), rs.getString("SDT"), rs.getString("EMAIL")};
 				model.addRow(objList);
 				
 			}
 		} catch (SQLException e) {
-			java.util.logging.Logger.getLogger(NHANVIEN.class.getName()).log(Level.SEVERE, null, e);
+			java.util.logging.Logger.getLogger(KHACHHANG.class.getName()).log(Level.SEVERE, null, e);
 		}
 	}
 }

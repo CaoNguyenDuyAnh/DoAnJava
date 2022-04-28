@@ -59,7 +59,7 @@ public class XEMAY extends JPanel {
 				
 			}
 		} catch (SQLException e) {
-			java.util.logging.Logger.getLogger(NHANVIEN.class.getName()).log(Level.SEVERE, null, e);
+			java.util.logging.Logger.getLogger(XEMAY.class.getName()).log(Level.SEVERE, null, e);
 		}
 
 	}

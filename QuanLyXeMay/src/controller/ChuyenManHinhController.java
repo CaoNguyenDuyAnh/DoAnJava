@@ -15,7 +15,7 @@ import bean.DanhMucBean;
 import view.BANHANG;
 import view.KHACHHANG;
 import view.NCC;
-import view.NHANVIEN;
+import view.NHANVIEN1;
 import view.THONGKE;
 import view.XEMAY;
 
@@ -88,7 +88,7 @@ public class ChuyenManHinhController {
 					node = new BANHANG();
 					break;
 				case "NHANVIEN":
-					node = new NHANVIEN();
+					node = new NHANVIEN1();
 					break;
 				default:
 					node = new THONGKE();

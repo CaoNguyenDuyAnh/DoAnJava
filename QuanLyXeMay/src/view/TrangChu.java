@@ -55,7 +55,7 @@ public class TrangChu extends JFrame {
 		setFont(new Font("Dialog", Font.BOLD, 17));
 		setTitle("Qu\u1EA3n l\u00FD xe m\u00E1y");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1143, 708);
+		setBounds(100, 100, 1298, 737);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -70,15 +70,15 @@ public class TrangChu extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addComponent(jpnMenu, GroupLayout.PREFERRED_SIZE, 171, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(jpnView, GroupLayout.PREFERRED_SIZE, 975, GroupLayout.PREFERRED_SIZE)
+					.addComponent(jpnView, GroupLayout.PREFERRED_SIZE, 1111, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(jpnMenu, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE)
-						.addComponent(jpnView, GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE))
+						.addComponent(jpnView, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+						.addComponent(jpnMenu, GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE))
 					.addContainerGap())
 		);
 		jpnMenu.setLayout(null);

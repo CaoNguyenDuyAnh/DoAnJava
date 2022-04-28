@@ -53,7 +53,7 @@ public class NCC extends JPanel {
 				
 			}
 		} catch (SQLException e) {
-			java.util.logging.Logger.getLogger(NHANVIEN.class.getName()).log(Level.SEVERE, null, e);
+			java.util.logging.Logger.getLogger(NCC.class.getName()).log(Level.SEVERE, null, e);
 		}
 	}
 
