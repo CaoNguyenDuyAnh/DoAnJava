@@ -1,18 +1,26 @@
 package model;
 
-import java.sql.Date;
+
+import java.awt.Stroke;
+
+import javax.swing.JComboBox;
 
 public class HOADON {
 	private String ma_hd;
-	private	Date ngay_lap;
-	private String ma_kh;
-	private String ma_nv;
-	public HOADON(String ma_hd, Date ngay_lap, String ma_kh, String ma_nv) {
+	private	String ngay_lap;
+	private JComboBox <String> ten_kh;
+	private JComboBox <String> ten_nv;
+	private JComboBox<String> ten_xe;
+	private JComboBox<String> mau;
+	public HOADON(String ma_hd, String ngay_lap, JComboBox<String> ten_kh, JComboBox<String> ten_nv,
+			JComboBox<String> ten_xe, JComboBox<String> mau) {
 		super();
 		this.ma_hd = ma_hd;
 		this.ngay_lap = ngay_lap;
-		this.ma_kh = ma_kh;
-		this.ma_nv = ma_nv;
+		this.ten_kh = ten_kh;
+		this.ten_nv = ten_nv;
+		this.ten_xe = ten_xe;
+		this.mau = mau;
 	}
 	public String getMa_hd() {
 		return ma_hd;
@@ -20,24 +28,41 @@ public class HOADON {
 	public void setMa_hd(String ma_hd) {
 		this.ma_hd = ma_hd;
 	}
-	public Date getNgay_lap() {
+	public String getNgay_lap() {
 		return ngay_lap;
 	}
-	public void setNgay_lap(Date ngay_lap) {
+	public void setNgay_lap(String ngay_lap) {
 		this.ngay_lap = ngay_lap;
 	}
-	public String getMa_kh() {
-		return ma_kh;
+	public JComboBox<String> getTen_kh() {
+		return ten_kh;
 	}
-	public void setMa_kh(String ma_kh) {
-		this.ma_kh = ma_kh;
+	public void setTen_kh(JComboBox<String> ten_kh) {
+		this.ten_kh = ten_kh;
 	}
-	public String getMa_nv() {
-		return ma_nv;
+	public JComboBox<String> getTen_nv() {
+		return ten_nv;
 	}
-	public void setMa_nv(String ma_nv) {
-		this.ma_nv = ma_nv;
+	public void setTen_nv(JComboBox<String> ten_nv) {
+		this.ten_nv = ten_nv;
 	}
+	public JComboBox<String> getTen_xe() {
+		return ten_xe;
+	}
+	public void setTen_xe(JComboBox<String> ten_xe) {
+		this.ten_xe = ten_xe;
+	}
+	public JComboBox<String> getMau() {
+		return mau;
+	}
+	public void setMau(JComboBox<String> mau) {
+		this.mau = mau;
+	}
+	public static HOADON get(int selectedIndex) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 	
 }

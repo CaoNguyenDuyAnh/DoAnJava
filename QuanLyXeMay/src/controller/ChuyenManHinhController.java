@@ -16,7 +16,7 @@ import view.BANHANG;
 import view.KHACHHANG;
 import view.NCC;
 import view.NHANVIEN1;
-import view.THONGKE;
+import view.THONGKE1;
 import view.XEMAY;
 
 public class ChuyenManHinhController {
@@ -40,7 +40,7 @@ public class ChuyenManHinhController {
 		
 		root.removeAll();
 		root.setLayout(new BorderLayout());
-		root.add(new THONGKE());
+		root.add(new THONGKE1());
 		root.validate();
 		root.repaint();
 	}
@@ -73,13 +73,13 @@ public class ChuyenManHinhController {
 		public void mouseClicked(MouseEvent e) {
 			switch(kind) {
 				case "THONGKE":
-					node = new THONGKE();
+					node = new THONGKE1();
 					break;
 				case "XEMAY":
 					node = new XEMAY();
 					break;
 				case "NCC":
-					node = new NCC();
+					node = new NCC(); 
 					break;
 				case "KHACHHANG":
 					node = new KHACHHANG();
@@ -91,7 +91,7 @@ public class ChuyenManHinhController {
 					node = new NHANVIEN1();
 					break;
 				default:
-					node = new THONGKE();
+					node = new THONGKE1();
 					break;
 			}
 			root.removeAll();
